@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{A556D790-1960-D0B9-6CDC-0A6AECD29923}</ProjectGuid>
+    <ProjectGuid>{054F0A22-A5FB-ED60-3087-D004BFDB511D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,20 +63,24 @@
   <ItemGroup>
     <Compile Include="Assets\__Scripts\CameraFollow.cs" />
     <Compile Include="Assets\__Scripts\DeathScript.cs" />
+    <Compile Include="Assets\__Scripts\GameControl.cs" />
     <Compile Include="Assets\__Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\__Scripts\Platform.cs" />
     <Compile Include="Assets\__Scripts\Player.cs" />
+    <Compile Include="Assets\__Scripts\RepeatingBackground.cs" />
+    <Compile Include="Assets\__Scripts\ScrollingObject.cs" />
+    <Compile Include="Assets\__Scripts\WorldContext.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Unity Projects/Tower Jumper/Tower Jumper/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Unity Projects/Megaphone Jump/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity Projects/Tower Jumper/Tower Jumper/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Megaphone Jump/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Unity Projects/Tower Jumper/Tower Jumper/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Megaphone Jump/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity Projects/Tower Jumper/Tower Jumper/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Unity Projects/Megaphone Jump/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -259,7 +263,7 @@
       <HintPath>D:/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>D:/Unity Projects/Tower Jumper/Tower Jumper/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>D:/Unity Projects/Megaphone Jump/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -3,21 +3,76 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
+    /*
+        public Transform target;
+        public float smoothSpeed = .3f;
 
+
+        // Update is called once per frame
+        void LateUpdate () {
+            if (target.position.y > transform.position.y)
+            {
+                Vector3 newPos = new Vector3(transform.position.x, target.position.y, transform.position.z);
+                transform.position = newPos;
+
+            }
+        } 
+
+        */
+
+
+
+
+
+
+
+   // public GameManager gameManager;
+  //  public Text textSpeed;
+    public Transform timerImage;
+
+    private float speed;
+    public float speedMultiple = .05f;
+
+    private Vector3 targetPosition;
     public Transform target;
-    public float smoothSpeed = .3f;
 
-  //  private Vector3 currentVelocity;
-	
-	
-	// Update is called once per frame
-	void LateUpdate () {
-		if (target.position.y > transform.position.y)
+    private float distance;
+
+    public float startLimmit = 7f;
+    public float maxDistanceBeforeLose = 7f;
+
+    private float timer;
+
+    void Start()
+    {
+        timer = 0;
+    }
+    void LateUpdate()
+    {
+        distance = target.position.y - transform.position.y;
+
+        if (target.position.y < startLimmit)
+            return;
+
+        if (distance < -maxDistanceBeforeLose)
         {
-            Vector3 newPos = new Vector3(transform.position.x, target.position.y, transform.position.z);
-            transform.position = newPos;
-            //Vector3.SmoothDamp(transform.position, newPos,ref currentVelocity,smoothSpeed * Time.deltaTime);
-            //Vector3.Lerp(transform.position, newPos, smoothSpeed
+        //    gameManager.GameOver();
         }
- 	}
+        else if (distance > 1)
+        {
+            targetPosition = new Vector3(0, target.position.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, distance * Time.deltaTime);
+        }
+        else
+        {
+            targetPosition = new Vector3(0, transform.position.y + speed, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
+        }
+
+        timer += Time.deltaTime;
+     //   textSpeed.text = "x " + (int)(1 + (Time.time) / 60);
+        speed = (1 + (timer) / 60) * speedMultiple;
+    //    timerImage.rotation = Quaternion.Euler(0, 0, -((timer) % 60) * 360 / 60f);
+    }
+
 }

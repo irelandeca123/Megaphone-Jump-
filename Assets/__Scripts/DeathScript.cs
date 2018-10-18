@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class DeathScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    private void OnTriggerEnter2D(Collider2D other)
+    
+     
+    void Update()
     {
-        if (other.CompareTag("Player"))
-        {
-            Application.LoadLevel("GameOver");
-        }
+        if (transform.position.y < Camera.main.transform.position.y - WorldContext.OffScreenY)
+#pragma warning disable CS0618 // Type or member is obsolete
+         Application.LoadLevel(Application.loadedLevel);
+#pragma warning restore CS0618 // Type or member is obsolete
     }
-
+    
 }
