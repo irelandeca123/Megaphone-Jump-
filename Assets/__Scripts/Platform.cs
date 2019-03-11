@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Platform : MonoBehaviour {
 
+    //For the other controls that i had (using arrows and space bar)
+
+     //sets the jump force to 10
     public float jumpForce = 10f;
 
+    //when colided get the rigidbody component add velocity and jump force
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
